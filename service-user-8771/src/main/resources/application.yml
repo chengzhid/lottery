@@ -1,0 +1,23 @@
+server:
+  port: 8771
+spring:
+  application:
+    name: user-management
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    database: 0
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848, localhost:8850, localhost:8852
+        username: nacos
+        password: nacos
+      config:
+        import-check:
+          enabled: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/lottery
+    username: root
+    password: 2002126
+    driver-class-name: com.mysql.jdbc.Driver
